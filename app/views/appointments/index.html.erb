@@ -1,1 +1,23 @@
-<h1> Testing this view </h1>
+<h1> class="title" All Appointments</h1>
+
+<section class="section"
+    <div class="container"
+        <% @appointments.each do |appointment| %>
+            <div class="card">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content">
+                            <p class="Appointment #"> <%= appointment.id[0] %>. <%= appointment.date_time %></p>
+                        </div>
+                    </div>
+                    <div class="appointment-type">
+                        <%= appointment.appointment_type %>
+                    </div>
+                    <div class="notes">
+                        <%= appointment.notes %>
+                    </div>
+                </div>
+            </div>
+        <% end %>          
+    </div>
+</section>

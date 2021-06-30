@@ -28,9 +28,6 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
-# Produces clean, readable errors
-gem 'better_errors', '~> 2.1', '>= 2.1.1'
-
 # Bulma CSS
 gem 'bulma-rails', '~> 0.9.1'
 
@@ -51,6 +48,8 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  # Produces clean, readable errors
+  gem 'better_errors', '~> 2.1', '>= 2.1.1'
 end
 
 group :test do

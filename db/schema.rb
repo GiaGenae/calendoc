@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_06_30_003005) do
 
   create_table "appointments", force: :cascade do |t|
-    t.string "type"
+    t.string "appointment_type"
     t.datetime "date_time"
     t.text "notes"
     t.datetime "created_at", precision: 6, null: false

@@ -18,9 +18,13 @@ class AppointmentsController < ApplicationController
         end
     end
 
+    def show
+        @appointment = Appointment.find(params[:id])
+    end
+
     private
 
     def appointment_params
-        params.require(:appointment).permit(:type, :date_time)
+        params.require(:appointment).permit(:appointment_type, :date_time)
     end
 end

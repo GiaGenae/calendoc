@@ -1,13 +1,13 @@
-<h1> class="title" All Appointments</h1>
+<% content_for :page_title, "All Appointments" %>
 
 <section class="section"
-    <div class="container"
+    <div class="container">
         <% @appointments.each do |appointment| %>
             <div class="card">
                 <div class="card-content">
                     <div class="media">
                         <div class="media-content">
-                            <p class="Appointment #"> <%= appointment.id[0] %>. <%= appointment.date_time %></p>
+                            <p class="Appointment #"> <%= appointment.id[0] %>. <%= link_to appointment.date_time %></p>
                         </div>
                     </div>
                     <div class="appointment-type">

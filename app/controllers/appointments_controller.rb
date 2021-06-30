@@ -27,12 +27,22 @@ class AppointmentsController < ApplicationController
     end
 
     def update
+        @appointment = Appointment.find(params[:id])
 
+        if @appointment.update(appointment_params)
+            redirect_to @appointment
+        else
+            render 'edit'
+        end
+    end
+
+    def edit
+        @appointment = Appointment.find(params[:id])
     end
 
     private
 
     def appointment_params
-        params.require(:appointment).permit(:appointment_type, :date_time)
+        params.require(:appointment).permit(:appointment_type, :date_time, :notes)
     end
 end

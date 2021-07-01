@@ -8,10 +8,6 @@ class AppointmentsController < ApplicationController
         @appointment = Appointment.new
     end
 
-    def new
-
-    end
-
     def create
         @appointment = Appointment.new(appointment_params)
 
@@ -38,6 +34,14 @@ class AppointmentsController < ApplicationController
 
     def edit
         @appointment = Appointment.find(params[:id])
+    end
+
+    def destroy
+        @appointment = Appointment.find(params[:id])
+        @appointment.destroy
+
+
+        redirect_to appointments_path
     end
 
     private

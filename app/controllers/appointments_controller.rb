@@ -1,7 +1,7 @@
 class AppointmentsController < ApplicationController
 
     def index
-        @appointments = Appointment.all
+        @appointments = Appointment.all.order("date ASC")
     end
 
     def new
@@ -47,6 +47,6 @@ class AppointmentsController < ApplicationController
     private
 
     def appointment_params
-        params.require(:appointment).permit(:appointment_type, :date_time, :notes)
+        params.require(:appointment).permit(:appointment_type, :date, :time, :notes)
     end
 end

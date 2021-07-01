@@ -1,4 +1,4 @@
-<% content_for :page_title, @appointment.date_time %> 
+<% content_for :page_title, @appointment.date %> 
 
 <section class="section">
 	<div class="container">
@@ -21,11 +21,14 @@
 		</nav>
 		<hr/>
 
-		<div class="date_time">
-			<%= @appointment.date_time %>
+        <div class="date">
+			<h1> <%= @appointment.date %> </h1>
 		</div>
         <div class="appointment_type">
 			<%= @appointment.appointment_type %>
+		</div>
+        <div class="time">
+			<%= @appointment.time %>
 		</div>
         <div class="notes"> Notes:
 			<%= @appointment.notes %>

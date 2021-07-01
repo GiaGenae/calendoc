@@ -7,11 +7,14 @@
                 <div class="card-content">
                     <div class="media">
                         <div class="media-content">
-                            <p class="Appointment #"> <%= appointment.id[0] %>. <%= link_to appointment.date_time %></p>
+                            <p class="Appointment #"><%= link_to appointment.date, appointment %></p>
                         </div>
                     </div>
                     <div class="appointment-type">
                         <%= appointment.appointment_type %>
+                    </div>
+                    <div class="time">
+                        <%= appointment.time %>
                     </div>
                     <div class="notes">
                         <%= appointment.notes %>
